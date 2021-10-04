@@ -1,0 +1,14 @@
+version: "2"
+services:
+
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - 5672:5672
+    hostname: amqp.docker
+    networks:
+      - external_docker
+
+networks:
+  external_docker:
+    external: true 
